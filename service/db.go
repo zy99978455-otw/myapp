@@ -6,5 +6,5 @@ import (
 )
 
 func Migrate() error {
-	return common.DB.AutoMigrate(&model.User{}, &model.Comment{})
+	return common.DB.AutoMigrate(&model.User{})
 }

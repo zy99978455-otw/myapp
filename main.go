@@ -17,6 +17,16 @@ func main() {
 	{
 		// 用户注册
 		user.POST("/register", controller.Register)
+
+		//用户登录
+		user.POST("/login", controller.Login)
+
+		// 根据用户名查询用户信息
+		user.GET("/getByName", controller.GetUserByName)
+
+		// 删除用户
+		user.DELETE("/:id", controller.DeleteById)
+
 	}
 
 	// 启动服务器

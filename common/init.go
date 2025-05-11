@@ -7,7 +7,7 @@ import (
 )
 
 // 连接数据库
-var dsn = "root:MYSQL@tcp(localhost:3306)/web?charset=utf8mb4"
+var dsn = "root:MYSQL@tcp(127.0.0.1:3306)/web?charset=utf8mb4"
 var DB *gorm.DB
 
 func init() {

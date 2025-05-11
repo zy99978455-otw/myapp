@@ -11,7 +11,7 @@ func Migrate(c *gin.Context) {
 	err := service.Migrate()
 	if err != nil {
 		log.Println("迁移表结构：", err.Error())
-		c.JSON(http.StatusInternalServerError, gin.H{"result": false, "error": error.Error()})
+		c.JSON(http.StatusInternalServerError, gin.H{"result": false, "error": err.Error()})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"result": true})
